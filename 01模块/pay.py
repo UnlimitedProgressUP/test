@@ -1,7 +1,7 @@
 # 支付超时时间
 timeout = 1000
 # 微信支付
-def wechat_payr():
+def wechat_pay():
     print("我是微信支付")
 #支付宝支付
 def ali_pay():
