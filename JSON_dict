@@ -1,0 +1,17 @@
+import json
+data ={
+    'name':'zhangsan',
+    'age':12,
+    'sex':'女',
+    "订单": {"状态": "已发货", "单号": "123"}
+}
+
+def show(title: str, obj) ->None:  # obj 参数  None, 函数干完之后，不会返回任何值
+    print(f"\n==== {title} ====")
+    print(json.dumps(obj, ensure_ascii=False, indent=2))  # python 字典转 JSON字符串
+    # json.dumps     Python 的字典/列表，转换成格式化的 JSON 字符串  ensure_ascii=False 直接给我显示中文，别转码！ index= 2 缩进2个空格
+show("字典里面的信息:",data)   # 调用参数 obj 是data 才打印出来 json格式
+
+# JSON字符串 转 字典
+json_str= '{"name":"Alice","age":18,"CITY":"Beijing"}'  #传的是字符串
+print(json.loads(json_str))        # {'name': 'Alice', 'age': 18, 'CITY': 'Beijing'}
