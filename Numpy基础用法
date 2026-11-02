@@ -1,0 +1,39 @@
+import numpy as np
+
+# a=np.arange(15).reshape(3,5)
+# print("数组的维度:",a.shape) # 数组的维度: (3, 5)
+# print("数组轴的个数:",a.ndim)  #  数组轴的个数: 2   说白了几层
+# print("数组元素类型:",a.dtype)  #  数组元素类型: int64
+# print("数组元素总个数:",a.size) # 数组元素总个数: 15
+# print("类型查询:",type(a))  # numpy.ndarray
+
+
+# NumPy数组是一个多维的数组对象（矩阵），称为ndarray，
+# 具有矢量算术运算能力和复杂的广播能力，并具有执行速度快和节省空间的特点。
+# 注意：ndarray的下标从0开始，且数组里的所有元素必须是相同类型。
+
+# 把列表 List 转换成 narry
+# my_list=[1,2,3,4,5]
+# ary1=np.array(my_list)
+# print(ary1) # [1 2 3 4 5]
+# print(type(ary1))
+
+# arange(起始,结束,步长,dtype=类型)
+# a1=np.arange(0,10,2,dtype=np.int64)
+# print(a1)
+# print(a1)     # [0 2 4 6 8]
+# # print(a1[2])    4
+
+
+# random.rand() 生成 0.0- 1.0之间,包左不包右 随机小数矩阵
+a2=np.random.rand(3,5)    # 3行3列
+print(a2)
+
+
+# random.randint(开始,结束,size=(行,列 )) 生成 开始，结束 之间,包左不包右   随机整数矩阵
+a3=np.random.randint(3,5,size=(2,3))    # 2行3列
+print(a3)
+
+#random.uniform(起始值, 结束值,size=(行,列)) 生成指定范围,包左不包右 随机小数矩阵
+a4=np.random.uniform(2,3,size=(2,3)) # 2行3列
+print(a4)
