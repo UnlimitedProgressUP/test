@@ -1,0 +1,38 @@
+import numpy as np
+# 把atty1 转换成 float32 位的      np.astype() 方法 类型转换 
+# atty2=atty1.astype(np.float32)
+# print(atty2)
+# print(atty2.dtype)  # float32
+
+# Numpy 矩阵计算
+# 基本运算
+# arry1 =np.array([10,20,30,40])
+# arry2 =np.array([10,20,30,40])
+# arry3 =np.arange(4) #  0 1 2 3
+# print(arry1+arry2)  # [20 40 60 80]
+# print(arry1+arry3)  # [10 21 32 43]
+
+# 矩阵乘法行列一样
+a33=np.array([[1,2,3],[4,5,6]])
+a44=np.array([[1,2,3],[4,5,6]])
+#[[ 1  4  9]
+#[16 25 36]]
+print(a33*a44)
+
+# 矩阵乘法 行列不一致.    行数, 列数不一致  重要 
+# [[30 24]
+#  [84 69]]
+arr4 =np.array([[1,2,3],[4,5,6]])
+arr5 =np.array([[9,8],[6,5],[3,2]])
+print(f"arr4是:{arr4}")
+# arr4是:[[1 2 3]
+#  [4 5 6]]
+print(f"arr5是:{arr5}")
+#arr5是:[[9 8]
+#[6 5]
+#[3 2]]
+print(type(arr5))  # <class 'numpy.ndarray'> 
+
+print(np.dot(arr4,arr5))
+#[[30 24]
+#[84 69]]
